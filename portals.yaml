@@ -1,0 +1,144 @@
+eprocure:
+  enabled: true
+  scraper: "eprocure"
+  base_url: "https://eprocure.gov.in"
+  start_url: "https://eprocure.gov.in/cppp/latestactivetendersnew"
+  search_keyword: "ai"
+
+  selectors:
+    keyword_input: "#skeyword"
+    captcha_image: "img[data-drupal-selector='edit-captcha-image']"
+    captcha_input: "#edit-captcha-response"
+    search_button: "#btnSearch"
+    results_table: "table:has(th:has-text('Sl.No'))"
+
+
+tenderdetail:
+  enabled: true
+  scraper: "tenderdetail"
+  base_url: "https://www.tenderdetail.com"
+  start_url: "https://www.tenderdetail.com/Indian-Tenders"
+
+  search_keywords:
+    - traffic
+    - gis
+    # later add here:
+    # - computer vision
+    # - gis
+    # - road survey
+
+  selectors:
+    keyword_input: "#txtKeyword"
+    search_button: "#btnSearch"
+
+    tender_card: "div.tender_row"
+
+    sl_no: ".num"
+    tdr_no: ".m-tender-id"
+    brief_text: "a.m-brief > span"
+
+    tender_value: ".tender-value"
+
+    closing_month: ".month"
+    closing_day: ".day"
+    closing_year: ".year"
+
+    location_block: "h2.workDesc strong"
+
+    view_notice: "a.viewnotice"
+
+    next_page: "#next"
+
+indiantenders:
+  enabled: true
+  scraper: "indiantenders"
+  base_url: "https://www.indiantenders.in"
+  start_url: "https://www.indiantenders.in"
+
+  # use_global_keywords: true
+
+  search_keywords:
+    - computer vision and artificial intelligence
+    # later:
+    - computer vision
+
+  selectors:
+    keyword_input: "#advsearch"
+    search_button: "a.search-bg"
+
+    tender_card: "div[ng-repeat='rowDetails in getTenderData.tenderDetails']"
+
+    state: "p.purchase-box.ng-binding"
+    title: "strong.ng-binding"
+    ref_id: "p.list-data.ng-binding:has-text('Ref ID')"
+    deadline: "p.list-data.ng-binding:has-text('Deadline')"
+    value: "p.list-data.ng-binding:has-text('Value')"
+    detail_url: "a.prod-view"
+
+    next_page: "a.subscribe-blue:has-text('Next')"
+
+# tendertiger:
+#   enabled: true
+#   scraper: "tendertiger"
+#   base_url: "https://www.tendertiger.com"
+#   start_url: "https://www.tendertiger.com"
+
+#   # keywords can be overridden by UI / batch files
+#   search_keywords:
+#     - artificial intelligence
+#     - computer vision
+
+#   selectors:
+#     # ================= SEARCH =================
+#     keyword_input: "#txtadvanceSearchMain"
+#     search_button: "#advancesearchchkai"
+
+#     # ================= LOCATION FILTER =================
+#     india_view_more: "a.btn-view-more[data-locationtype='country']"
+
+#     # ================= TENDER LIST =================
+#     tender_card: "li.tender-listing"
+
+#     tdr_no: "span.sub_title:has-text('TID') + b.value"
+#     title: "a.twm-job-title"
+#     description: "p.twm-job-address.brief a"
+#     location: "b.tender-listing-serial"
+
+#     tender_value: "span.sub_title:has-text('Worth') + b.value"
+#     emd: "span.sub_title:has-text('EMD') + b.value"
+#     closing_date: "span.sub_title:has-text('Due Date') + b.value"
+
+#     next_page: "a.next"
+
+tendertiger:
+  enabled: true
+  scraper: "tendertiger"
+  base_url: "https://www.tendertiger.com"
+  start_url: "https://www.tendertiger.com"
+
+  search_keywords:
+    - artificial intelligence
+    - computer vision
+
+  selectors:
+    # ================= SEARCH =================
+    keyword_input: "#txtadvanceSearchMain"
+    search_button: "#advancesearchchkai"
+
+    # ================= LOCATION FILTER =================
+    india_view_more: "a.btn-view-more[data-locationtype='country']"
+
+    # ================= TENDER LIST =================
+    tender_card: "li.tender-listing"
+
+    tdr_no: "span.sub_title:has-text('TID') + b.value"
+    title: "a.twm-job-title"
+    description: "p.twm-job-address.brief a"
+    location: "b.tender-listing-serial"
+
+    tender_value: "span.sub_title:has-text('Worth') + b.value"
+    emd: "span.sub_title:has-text('EMD') + b.value"
+    closing_date: "span.sub_title:has-text('Due Date') + b.value"
+
+    # 🔥 VIEW MORE (NOT NEXT PAGE)
+    view_more: "button#viewmorerecord"
