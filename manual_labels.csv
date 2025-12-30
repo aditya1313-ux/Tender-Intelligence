@@ -1,0 +1,28 @@
+text,label,comment
+"AI based road condition survey using mobile camera system",1,core business
+"Machine learning based pavement distress detection and reporting",1,road analytics
+"Drone based road inspection and condition assessment",1,road survey analytics
+"Computer vision based road asset management system",1,AI road monitoring
+"AI enabled road safety and accident analysis platform",1,road analytics
+"Automated road inspection using CCTV cameras and AI",1,camera based road analysis
+"Image processing based road defect detection and reporting",1,road condition reporting
+"Survey and assessment of road condition using AI models",1,core survey work
+"Development of AI platform for road infrastructure monitoring",1,road monitoring
+"AI based traffic and road analytics solution",1,transport analytics
+
+"Construction of CC road and drainage work",0,pure civil execution
+"Widening and strengthening of state highway",0,road construction
+"Annual maintenance contract for road repair works",0,maintenance execution
+"Supply of bitumen, asphalt and construction materials",0,materials supply
+"Laying of interlocking paver blocks on road",0,road construction
+"Repair and resurfacing of existing road",0,civil repair
+"Installation of road safety cones, barriers and signage",0,hardware installation
+"Execution of road work including earthwork and pavement",0,execution work
+"Construction of new road including culverts and drains",0,civil construction
+"Maintenance of roads including pothole filling",0,manual maintenance
+
+"AI based CCTV analytics for warehouse and logistics monitoring",0,AI but not road condition
+"Computer vision based surveillance system for industrial premises",0,non road AI
+"AI based monitoring of mining operations using cameras",0,non road domain
+"Software development for general AI and ML services",0,too generic
+"Supply and installation of CCTV cameras for city surveillance",0,hardware supply
